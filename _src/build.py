@@ -13,6 +13,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://bigrockmanagement.com"
 EMAIL = "BigRockLMTD@gmail.com"
+LEGAL_NAME = "Big Rock Management LLC"
+BROKERAGE = "Keller Williams Southern Arizona"
+EFFECTIVE = "October 4, 2026"
+NO_QUOTE = {"404.html", "privacy.html", "terms.html", "accessibility.html"}
+
+# Equal Housing Opportunity mark (house with an equals sign), drawn as plain geometry
+EHO = ('<svg class="eho" viewBox="0 0 40 40" role="img" aria-label="Equal Housing Opportunity">'
+       '<path d="M20 3 2 15.5h4.5V37h27V15.5H38z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>'
+       '<rect x="12" y="18" width="16" height="4" fill="currentColor"/><rect x="12" y="26" width="16" height="4" fill="currentColor"/></svg>')
 
 # ---------- icons (Lucide, ISC license) ----------
 def icon(name):
@@ -129,7 +138,7 @@ def quote(service=""):
       <p class="form__status" role="status" tabindex="-1"></p>
       <div class="form__foot">
         <button class="btn btn--gold" type="submit"><span>Send my quote request</span>{icon("arrow")}</button>
-        <p class="form__note">We only use your details to reply to you.</p>
+        <p class="form__note">We only use your details to reply to your request. See our <a href="privacy.html">privacy policy</a>.</p>
       </div>
     </form>
   </div>
@@ -158,8 +167,13 @@ FOOTER = f'''<footer class="site-footer">
         <li><a href="#quote">Request a free quote</a></li>
       </ul>
     </div>
+    <div class="footer__broker">
+      {EHO}
+      <p>Real estate services are provided by Big Rock Realty Group, brokered by {BROKERAGE}. Each Keller Williams office is independently owned and operated. Equal Housing Opportunity.</p>
+    </div>
     <div class="footer__legal">
-      <span>&copy; 2026 Big Rock Management. All rights reserved.</span>
+      <span>&copy; 2026 {LEGAL_NAME}. All rights reserved.</span>
+      <nav class="footer__links" aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="accessibility.html">Accessibility</a></nav>
       <span>Placeholder stock photography via Unsplash.</span>
     </div>
   </div>
@@ -196,11 +210,13 @@ def page(file, title, desc, body_class, main, service="", current=None):
 <main id="main">
 {main}
 </main>
-{quote(service) if file != "404.html" else ""}
+{quote(service) if file not in NO_QUOTE else ""}
 {FOOTER}
 </body>
 </html>
 '''
+    if file in NO_QUOTE:
+        html = html.replace('href="#quote"', 'href="./#quote"')
     (ROOT / file).write_text(html)
 
 SCHEMA = f'''<script type="application/ld+json">
@@ -574,6 +590,13 @@ realty = f'''<section class="page-hero">
   </div>
 </section>
 
+<section class="broker-strip" aria-label="Brokerage disclosure">
+  <div class="wrap">
+    {EHO}
+    <p><b>Big Rock Realty Group</b> is a real estate team brokered by <b>{BROKERAGE}</b>. Each Keller Williams office is independently owned and operated. Equal Housing Opportunity.</p>
+  </div>
+</section>
+
 <section class="section" aria-labelledby="sell-title">
   <div class="wrap split">
     <img src="assets/img/home-hillside.jpg" width="1400" height="934" alt="Home on a saguaro-covered hillside in the Tucson foothills" loading="lazy">
@@ -606,5 +629,121 @@ lost = f'''<section class="section lost">
   </div>
 </section>'''
 page("404.html", "Page not found | Big Rock Management", "That page isn't here.", "page-home", lost, current="")
+
+
+
+# ================= LEGAL =================
+def legal(file, title, desc, h1, intro, body):
+    main = f'''<section class="section legal">
+  <div class="wrap">
+    <h1>{h1}</h1>
+    <p class="legal__meta">Effective {EFFECTIVE}</p>
+    <p class="legal__intro">{intro}</p>
+    {body}
+  </div>
+</section>'''
+    page(file, title, desc, "page-legal", main, current="")
+
+legal("privacy.html", "Privacy Policy | Big Rock Management",
+      "How Big Rock Management collects, uses, and protects the information you share with us.",
+      "Privacy policy",
+      f"{LEGAL_NAME} (&ldquo;Big Rock,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) runs bigrockmanagement.com. This policy explains what we collect when you use the site or contact us, and what we do with it. The short version: we use your details only to answer your request, and we never sell them.",
+      f'''<h2>What we collect</h2>
+    <p>When you send a quote request or email us, we receive what you choose to give us:</p>
+    <ul>
+      <li>Your name and email address</li>
+      <li>Your phone number, if you add it</li>
+      <li>The general area of the property and the service you're interested in</li>
+      <li>Anything you write in the details box, and any photos you email us</li>
+    </ul>
+    <p>We don't use cookies, analytics, advertising trackers, or tracking pixels on this site. Our host, GitHub Pages, may keep standard server logs (such as IP addresses) for security and to keep the site running. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's privacy statement</a>.</p>
+
+    <h2>How we use it</h2>
+    <ul>
+      <li>To reply to you, prepare your free quote, and schedule the work</li>
+      <li>To provide and follow up on services you ask us for</li>
+      <li>To keep normal business records, and to meet legal or tax obligations</li>
+    </ul>
+    <p>We don't add you to marketing lists, and we don't send marketing texts. We contact you only about the request you sent.</p>
+
+    <h2>Who we share it with</h2>
+    <ul>
+      <li><b>Our form service.</b> Quote requests are delivered to our inbox by a form-processing provider (Formspree), which handles the data only to deliver it to us.</li>
+      <li><b>The Big Rock companies.</b> If your request is for a service run by another Big Rock company, such as cleaning by Big Rock Service Solutions or buying and selling with Big Rock Realty Group, we pass your request to that team so they can help you.</li>
+      <li><b>When the law requires it.</b> If we're legally required to, or to protect our rights or someone's safety.</li>
+    </ul>
+    <p>We do not sell or rent your personal information, and we don't share it for advertising.</p>
+
+    <h2>How long we keep it</h2>
+    <p>We keep your messages as long as we need them to handle your request and keep reasonable business records, and then we delete them.</p>
+
+    <h2>Your choices</h2>
+    <p>Email <a href="mailto:{EMAIL}">{EMAIL}</a> anytime to ask what we have about you, to correct it, or to have it deleted. We'll answer promptly, unless we have to keep something to meet a legal obligation.</p>
+
+    <h2>Security</h2>
+    <p>The site runs over HTTPS, and we limit who can see your messages. No method of sending or storing data is perfectly secure, so please don't send sensitive information such as payment details or Social Security numbers through the form.</p>
+
+    <h2>Children</h2>
+    <p>This site is meant for adults. We don't knowingly collect information from children under 13.</p>
+
+    <h2>Other websites</h2>
+    <p>Links to other sites, including bigrockaz.com, are covered by those sites' own privacy policies.</p>
+
+    <h2>Changes</h2>
+    <p>If we update this policy, we'll post the new version here and change the effective date above.</p>
+
+    <h2>Contact</h2>
+    <p>{LEGAL_NAME}, Tucson, Arizona. <a href="mailto:{EMAIL}">{EMAIL}</a></p>''')
+
+legal("terms.html", "Terms of Use | Big Rock Management",
+      "The terms that apply when you use bigrockmanagement.com.",
+      "Terms of use",
+      f"These terms apply to your use of bigrockmanagement.com, which is run by {LEGAL_NAME}. By using the site, you agree to them.",
+      f'''<h2>About the site</h2>
+    <p>This site describes services from the Big Rock group of companies in the Tucson metro area: short-term rental management and hauling by {LEGAL_NAME}, cleaning by Big Rock Service Solutions, and real estate through Big Rock Realty Group, brokered by {BROKERAGE}.</p>
+
+    <h2>Quotes</h2>
+    <p>Quotes are free estimates based on the information you give us. A quote isn't a binding offer or contract. Prices and scope are confirmed in writing before any work begins, and they may change if the job differs from what was described.</p>
+
+    <h2>Services</h2>
+    <p>Any service you book is governed by the agreement or written confirmation for that job. Real estate services are provided only by licensed agents through {BROKERAGE}, and are subject to that brokerage's agreements and policies.</p>
+
+    <h2>Photos and content</h2>
+    <p>Some photos on this site are stock images used for illustration. They don't show our own work, properties, or staff. The site content, logo, and designs belong to {LEGAL_NAME} and may not be copied without permission.</p>
+
+    <h2>No warranties</h2>
+    <p>We try to keep this site accurate and available, but it's provided "as is," without warranties of any kind. Information here may change without notice.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the extent the law allows, {LEGAL_NAME} isn't liable for any indirect or consequential damages arising from your use of this website.</p>
+
+    <h2>Links</h2>
+    <p>We link to other websites for convenience. We aren't responsible for their content or practices.</p>
+
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of the State of Arizona.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms: <a href="mailto:{EMAIL}">{EMAIL}</a></p>''')
+
+legal("accessibility.html", "Accessibility | Big Rock Management",
+      "Our commitment to making bigrockmanagement.com usable for everyone.",
+      "Accessibility",
+      "We want everyone to be able to use this site and reach us, including people who use screen readers, keyboard navigation, magnification, or other assistive technology.",
+      f'''<h2>Our standard</h2>
+    <p>We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA.</p>
+
+    <h2>What we've done</h2>
+    <ul>
+      <li>Text and controls meet AA color-contrast levels</li>
+      <li>Every page works with a keyboard, with visible focus outlines and a skip-to-content link</li>
+      <li>Images have text descriptions, and decorative artwork is hidden from screen readers</li>
+      <li>Form fields have labels, and errors are explained in text, not just color</li>
+      <li>Animation is reduced for anyone who turns on "reduce motion"</li>
+      <li>Layouts adapt to phones and to zoom up to 200%</li>
+    </ul>
+
+    <h2>Need help or found a problem?</h2>
+    <p>If anything on this site is hard to use, email <a href="mailto:{EMAIL}">{EMAIL}</a> with the page and the problem. We'll fix it, and we'll help you get the information or the quote you need another way in the meantime.</p>''')
 
 print("built:", ", ".join(p.name for p in sorted(ROOT.glob("*.html"))))

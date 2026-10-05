@@ -963,3 +963,42 @@ a.patch:focus-visible .patch__bar { outline: 3px solid var(--ink); outline-offse
 
 .family-wrap { margin-top: clamp(3.5rem, 7vw, 5.5rem); }
 .section .family-title { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.75rem; }
+
+/* ---------- Brokerage disclosure + Equal Housing ---------- */
+
+.eho { width: 2.4rem; height: 2.4rem; flex: none; color: var(--ink); }
+.broker-strip { background: var(--cream); border-bottom: 2px solid var(--ink); padding: 1.1rem 0; }
+.broker-strip .wrap { display: flex; align-items: center; gap: 1rem; }
+.broker-strip p { font-size: 0.98rem; color: var(--ink-soft); max-width: 60rem; }
+.broker-strip b { color: var(--ink); }
+.footer__broker {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed rgba(18, 26, 43, 0.25);
+}
+.footer__broker p { font-size: 0.9rem; color: var(--ink-soft); max-width: 52rem; }
+.footer__broker + .footer__legal { border-top: 0; padding-top: 0; }
+.footer__links { display: flex; gap: 1.25rem; }
+.footer__links a { font-weight: 700; text-decoration: underline; text-underline-offset: 0.2em; }
+
+/* ---------- Legal pages (Read mode: a calm column) ---------- */
+
+.legal .wrap { max-width: 46rem; }
+.legal h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+.legal__meta { margin-top: 0.75rem; font-weight: 700; color: var(--tan-deep); }
+.legal__intro { margin-top: 1.5rem; font-size: 1.15rem; color: var(--ink-soft); }
+.legal h2 {
+  margin-top: 2.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+.legal p, .legal li { color: var(--ink-soft); max-width: 68ch; }
+.legal p + p { margin-top: 0.85rem; }
+.legal ul { margin: 0.75rem 0 0; padding-left: 1.25rem; display: grid; gap: 0.45rem; }
+.legal li::marker { color: var(--tan-deep); }
+.legal b { color: var(--ink); }
+.legal a { font-weight: 600; }
+.legal ul + p { margin-top: 0.95rem; }
