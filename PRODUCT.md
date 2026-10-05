@@ -30,7 +30,8 @@ One locally owned Tucson team covers a property from end to end: running it as a
 - **Short-term rental management** (Big Rock Management): listing setup and pricing (Airbnb/VRBO setup, photos, dynamic pricing); guest communication (messaging, check-in, reviews); turnovers and upkeep (cleans between stays, restocking, coordinating maintenance). Permit and tax filing help is NOT offered.
 - **Property cleaning**: operates as **Big Rock Service Solutions**, a sub-brand. Deep cleans and resets.
 - **Hauling & bulk debris removal** (Big Rock Management): junk and furniture; yard and construction debris; estate and move-out cleanouts. Commercial hauling is NOT offered.
-- **Real estate**: Big Rock Realty Group, the group's main business, is live at https://bigrockaz.com. The realty page routes buyers and sellers there.
+- **Real estate**: Big Rock Realty Group, the group's main business, is live at https://bigrockaz.com, and that site carries the team's full compliance. The realty page routes buyers and sellers there. This site only needs the brokerage name (Keller Williams Southern Arizona) plus the Equal Housing statement. The owner confirmed these are sufficient (2026-10-04).
+- **Licensing**: the owner confirmed short-term rental management does not need to run under the brokerage (2026-10-04).
 - **Service area**: Tucson metro (Tucson, Oro Valley, Marana, Vail, Sahuarita).
 - **Contact**: email only, BigRockLMTD@gmail.com. No named person, no phone number.
 
