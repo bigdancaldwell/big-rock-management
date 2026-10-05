@@ -564,7 +564,7 @@ realty = f'''<section class="page-hero">
     <div>
       <span class="page-hero__brand label">Big Rock Realty Group</span>
       <h1>Buying or selling? That's Big Rock Realty Group.</h1>
-      <p class="page-hero__lede">Real estate is the heart of the Big Rock family. Search homes, get your home's value, and meet the team at bigrockaz.com.</p>
+      <p class="page-hero__lede">Real estate is the heart of the Big Rock family. Start buying or selling with the team at bigrockaz.com.</p>
       <div class="hero__actions">
         <a class="btn btn--light" href="https://bigrockaz.com" target="_blank" rel="noopener">Visit bigrockaz.com{icon("arrow")}</a>
         <a class="link-arrow" href="#sell-title" style="color:var(--cream)">Getting ready to sell?{icon("arrow")}</a>
