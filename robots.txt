@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bigrockmanagement.com/sitemap.xml

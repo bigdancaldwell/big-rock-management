@@ -1,0 +1,8 @@
+.DS_Store
+.playwright-mcp/
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/*.json.bak
+__pycache__/
+.impeccable/questions/
+.claude/

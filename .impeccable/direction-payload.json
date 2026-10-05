@@ -1,0 +1,114 @@
+{
+  "title": "Choose the look for Big Rock Management",
+  "question": "The dice dealt The Patch Collection. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Patch Collection",
+      "kicker": "THE ROLL",
+      "lineage": "National-park patches, travel decals, and the Big Rock logo itself",
+      "thesis": "Your logo is already a patch, so every company gets one, and the site is the collection board where visitors pick theirs.",
+      "palette": ["#121a2b", "#f6c544", "#f2793a", "#e5466b", "#6a3fa0", "#d8b277", "#fbf6ec"],
+      "materials": ["embroidered patch badges with a dark navy border", "flat cut-color desert scenes", "canvas-tan ground"],
+      "viewport": "A big headline next to a cluster of four badges: Rentals, Service Solutions (cleaning), Hauling, and an empty stitched outline marked 'Realty, coming soon'. Each badge links to its page, and a 'Free quote' button sits in the nav.",
+      "risk": "If the badges are drawn timidly, this turns into a merch page. They have to be bold and well made.",
+      "raised": [
+        {"from": "challenger-papercut", "raise": "Every badge scene is built from flat, separately cut color layers (butte, saguaro, sun), with depth from overlap and no soft shading."},
+        {"from": "challenger-artpaul", "raise": "Each company owns one spot color pulled from the logo's sunset (gold for Hauling, coral for Cleaning, magenta for Rentals, violet for Realty), which carries its whole page."},
+        {"from": "challenger-sevenseg", "raise": "What isn't live yet is drawn on purpose: the Realty badge is an empty stitched outline until that site launches."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Miracle Mile Motel Sign",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Tucson's Miracle Mile neon motel signs (Ghost Ranch Lodge, Tucson Inn)",
+      "thesis": "The site is a roadside motel sign: a big arrow, a lit VACANCY, and one panel per service.",
+      "palette": ["#0f1630", "#ff5a7a", "#ffc94d", "#3fd3e0", "#f4efe6"],
+      "materials": ["painted sheet metal", "neon tube and chaser bulbs", "dusk sky"],
+      "viewport": "A tall sign at dusk with BIG ROCK on the marquee, panels reading Rentals / Cleaning / Hauling / Realty, and a lit 'VACANCY: free quotes' button.",
+      "risk": "This is also where most Tucson brands land, and it sits close to the Realty Group's neon look."
+    },
+    {
+      "id": "challenger-mook",
+      "label": "Annotated Job Photos",
+      "verdict": "competitive",
+      "lineage": "Japanese fashion mook spreads with hand-drawn label ribbons",
+      "thesis": "Overlapping photos of real jobs, with hand-drawn ribbons naming everything in them: 'old sectional', 'yard brush', 'guest-ready linens'.",
+      "palette": ["#16130f", "#c8372d", "#f2ead9", "#d8b277"],
+      "materials": ["overlapping photo prints", "hand-drawn ribbon labels", "cream stock"],
+      "viewport": "A stacked fan of photos (a haul trailer, a reset bedroom, a casita) with ribbons labeling each item, and the quote form folded in like an insert.",
+      "case": "Holds up on clarity because the labels show exactly what you haul and clean. It loses on audience fit and depends on real photos you don't have yet.",
+      "risk": "Until your own job photos arrive, stock images will make it feel generic.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-gothic-lolita-mook-hero.webp"
+    },
+    {
+      "id": "challenger-papercut",
+      "label": "Layered Papercut",
+      "verdict": "declined",
+      "lineage": "Łowicz layered folk papercuts",
+      "thesis": "A symmetrical cut-paper roundel, built up one color layer at a time.",
+      "palette": ["#d7263d", "#1b998b", "#f46036", "#2e294e"],
+      "materials": ["glossy flat paper layers"],
+      "viewport": "A symmetrical roundel with the services cut as layers.",
+      "risk": "Tucson owners won't recognize Polish folk art.",
+      "case": "Loses on audience fit and clarity.",
+      "kept": "Kept: depth from overlapping flat layers, with no shading.",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-lowicz-layered-papercut-hero.webp"
+    },
+    {
+      "id": "challenger-artpaul",
+      "label": "Mid-century Magazine",
+      "verdict": "declined",
+      "lineage": "Art Paul's magazine identity program",
+      "thesis": "A strict grid, one spot color per issue, and a hidden mark.",
+      "palette": ["#111111", "#ffffff", "#e63b2e"],
+      "materials": ["coated stock", "commissioned illustration"],
+      "viewport": "A serif masthead over two columns.",
+      "risk": "Too editorial for a service business.",
+      "case": "Loses on audience fit and clarity.",
+      "kept": "Kept: each company owns one spot color.",
+      "hero": "https://impeccable.style/worlds/cards/brand-identity-canon-art-paul-magazine-program-hero.webp"
+    },
+    {
+      "id": "challenger-sevenseg",
+      "label": "Gas-Station Price Sign",
+      "verdict": "declined",
+      "lineage": "Seven-segment LED signs and price totems",
+      "thesis": "Services listed like gas prices, with unlit segments drawn on purpose.",
+      "palette": ["#0b0b0b", "#ff3b1f", "#ffb000"],
+      "materials": ["LED segments on matte black"],
+      "viewport": "A price-totem stack of the services.",
+      "risk": "Implies prices you haven't published.",
+      "case": "Loses on clarity, because it suggests a price list.",
+      "kept": "Kept: missing pieces are designed, not hidden.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock-hero.webp"
+    },
+    {
+      "id": "challenger-shader",
+      "label": "WebGL Shader Portal",
+      "verdict": "declined",
+      "lineage": "Experiential studio sites",
+      "thesis": "A full-screen animated shader with thin type floating over it.",
+      "palette": ["#0a0620", "#ff6b3d"],
+      "materials": ["shader field", "film grain"],
+      "viewport": "One huge word over a living sunset field.",
+      "risk": "Hides the services, and runs slowly on phones.",
+      "case": "Loses on clarity and audience fit.",
+      "kept": "Kept: one oversized word, set with confidence.",
+      "hero": "https://impeccable.style/worlds/cards/webgl-shader-portal-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {
+    "label": "Standard home-services site",
+    "thesis": "What local service companies usually ship, done with full craft.",
+    "palette": ["#ffffff", "#121a2b", "#f2793a"],
+    "materials": ["full-width photo hero", "service card grid"],
+    "viewport": "A photo hero with a headline and quote button, three or four service cards, a 'why us' strip, and a quote form.",
+    "risk": "Looks like every competitor's site."
+  },
+  "steer": true
+}
