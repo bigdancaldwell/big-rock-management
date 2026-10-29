@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the static pages for bigrockmanagement.com.
+"""Builds the static pages for bigrockco.com.
 
 The site is plain HTML. This script stamps the shared header, footer, and quote
 form into each page so they stay identical. Edit the content below, then run:
@@ -11,7 +11,7 @@ Jekyll on GitHub Pages ignores this _src folder, so it is never published.
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://bigrockmanagement.com"
+SITE = "https://bigrockco.com"
 EMAIL = "BigRockLMTD@gmail.com"
 LEGAL_NAME = "Big Rock Management LLC"
 BROKERAGE = "Keller Williams Southern Arizona"
@@ -647,7 +647,7 @@ def legal(file, title, desc, h1, intro, body):
 legal("privacy.html", "Privacy Policy | Big Rock Management",
       "How Big Rock Management collects, uses, and protects the information you share with us.",
       "Privacy policy",
-      f"{LEGAL_NAME} (&ldquo;Big Rock,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) runs bigrockmanagement.com. This policy explains what we collect when you use the site or contact us, and what we do with it. The short version: we use your details only to answer your request, and we never sell them.",
+      f"{LEGAL_NAME} (&ldquo;Big Rock,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) runs bigrockco.com. This policy explains what we collect when you use the site or contact us, and what we do with it. The short version: we use your details only to answer your request, and we never sell them.",
       f'''<h2>What we collect</h2>
     <p>When you send a quote request or email us, we receive what you choose to give us:</p>
     <ul>
@@ -696,9 +696,9 @@ legal("privacy.html", "Privacy Policy | Big Rock Management",
     <p>{LEGAL_NAME}, Tucson, Arizona. <a href="mailto:{EMAIL}">{EMAIL}</a></p>''')
 
 legal("terms.html", "Terms of Use | Big Rock Management",
-      "The terms that apply when you use bigrockmanagement.com.",
+      "The terms that apply when you use bigrockco.com.",
       "Terms of use",
-      f"These terms apply to your use of bigrockmanagement.com, which is run by {LEGAL_NAME}. By using the site, you agree to them.",
+      f"These terms apply to your use of bigrockco.com, which is run by {LEGAL_NAME}. By using the site, you agree to them.",
       f'''<h2>About the site</h2>
     <p>This site describes services from the Big Rock group of companies in the Tucson metro area: short-term rental management and hauling by {LEGAL_NAME}, cleaning by Big Rock Service Solutions, and real estate through Big Rock Realty Group, brokered by {BROKERAGE}.</p>
 
@@ -727,7 +727,7 @@ legal("terms.html", "Terms of Use | Big Rock Management",
     <p>Questions about these terms: <a href="mailto:{EMAIL}">{EMAIL}</a></p>''')
 
 legal("accessibility.html", "Accessibility | Big Rock Management",
-      "Our commitment to making bigrockmanagement.com usable for everyone.",
+      "Our commitment to making bigrockco.com usable for everyone.",
       "Accessibility",
       "We want everyone to be able to use this site and reach us, including people who use screen readers, keyboard navigation, magnification, or other assistive technology.",
       f'''<h2>Our standard</h2>

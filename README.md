@@ -1,4 +1,4 @@
-# bigrockmanagement.com
+# bigrockco.com
 
 The umbrella website for the Big Rock group of companies: plain HTML/CSS on GitHub Pages.
 
