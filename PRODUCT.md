@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS (plus a small amount of vanilla JS), hosted free on GitHub Pages under the `bigdancaldwell` GitHub account, the same way as Big Rock Arms (bigrockarms.com). Custom domain: bigrockco.com (CNAME file). Quote form submissions go through a free form service (Formspree or similar) to BigRockLMTD@gmail.com. The owner needs to create the form endpoint and paste it into `main.js` (FORM_ENDPOINT). Until then, the form opens the visitor's email app with the request filled in.
+Static HTML/CSS (plus a small amount of vanilla JS), hosted on the owner's Hostinger Business plan alongside Big Rock Arms (bigrockarms.com), deployed by Hostinger's Git integration from the `main` branch of the `bigdancaldwell/big-rock-management` GitHub repo. Domain bigrockco.com (DNS at HostGator: A @ → 82.29.157.35, CNAME www → bigrockco.com). Quote form submissions go through a free form service (Formspree or similar) to BigRockLMTD@gmail.com. The owner needs to create the form endpoint and paste it into `main.js` (FORM_ENDPOINT). Until then, the form opens the visitor's email app with the request filled in.
 
 ## Users
 

@@ -1,6 +1,6 @@
 # bigrockco.com
 
-The umbrella website for the Big Rock group of companies: plain HTML/CSS on GitHub Pages.
+The umbrella website for the Big Rock group of companies: plain HTML/CSS hosted on Hostinger, deployed automatically from this repo's `main` branch.
 
 ## Editing
 
@@ -9,7 +9,7 @@ Edit the text there, then run:
 
     python3 _src/build.py
 
-(GitHub Pages ignores the `_src` folder.) The styles are in `styles.css` and the patch artwork is in `assets/patches.svg`.
+(`.htaccess` keeps `_src` and the notes files private on the live site.) The styles are in `styles.css` and the patch artwork is in `assets/patches.svg`.
 
 ## Two settings in `main.js`
 
